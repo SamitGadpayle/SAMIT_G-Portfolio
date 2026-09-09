@@ -1,0 +1,640 @@
+/* =====================================
+              HERO SECTION
+===================================== */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 0;
+    background:
+        radial-gradient(
+            circle at 20% 40%,
+            rgba(174, 0, 255, 0.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(0, 225, 255, 0.08),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 70% 80%,
+            rgba(255, 0, 140, 0.07),
+            transparent 30%
+        ),
+
+        #05060a;
+}
+
+/* .hero-section .container {
+    max-width: 1200px;
+    padding-left: clamp(1rem, 2vw, 2.25rem);
+    padding-right: clamp(1rem, 2vw, 2.25rem);
+} */
+
+.hero-section .row {
+    display: flex;
+    /* min-height: unset; */
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+.hero-section .col-lg-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+@media (min-width: 992px) {
+    .hero-content {
+        /* text-align: left; */
+        margin-left: 0;
+    }
+}
+
+/* Decorative neon line */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(120, 0, 255, 0.08);
+    filter: blur(120px);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* =====================================
+               PROFILE AREA
+===================================== */
+.profile-area {
+    position: relative;
+    width: 330px;
+    height: 430px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =====================================
+              PROFILE IMAGE
+===================================== */
+.profile-image {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    padding: 6px;
+    z-index: 5;
+    background: linear-gradient(
+        135deg,
+        #00eaff,
+        #8c00ff,
+        #ff00ae
+    );
+
+    box-shadow:
+        0 0 20px rgba(0, 234, 255, 0.5),
+        0 0 40px rgba(151, 0, 255, 0.4),
+        0 0 65px rgba(255, 0, 170, 0.25);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #08090d;
+    display: block;
+}
+
+/* =====================================
+            ROTATING NEON RINGS
+===================================== */
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Outer ring */
+.ring-one {
+    width: 390px;
+    height: 350px;
+    border: 3px solid transparent;
+    border-top-color: #ff00b7;
+    border-bottom-color: #8d00ff;
+    filter: drop-shadow(0 0 7px #ff00b7);
+    animation: rotateClockwise 9s linear infinite;
+}
+
+/* Middle ring */
+.ring-two {
+    width: 355px;
+    height: 395px;
+    border: 2px solid transparent;
+    border-left-color: #9d00ff;
+    border-right-color: #00ddff;
+    filter: drop-shadow(0 0 7px #9100ff);
+    animation: rotateAntiClockwise 7s linear infinite;
+}
+
+/* Inner ring */
+.ring-three {
+    width: 335px;
+    height: 315px;
+    border: 2px solid transparent;
+    border-top-color: #ff25b8;
+    border-right-color: #845cff;
+    filter: drop-shadow(0 0 8px #ff00a6);
+    animation: rotateClockwise 6s linear infinite;
+}
+
+/* Ring animation */
+@keyframes rotateClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotateAntiClockwise {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+/* =====================================
+             RIGHT CONTENT
+===================================== */
+.hero-content {
+    max-width: 630px;
+}
+
+/* Hello Text */
+.hello-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #00eaff;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Small line before HELLO */
+
+.hello-line {
+    width: 40px;
+    height: 2px;
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #9c00ff
+    );
+    box-shadow: 0 0 10px #00eaff;
+}
+
+/* =====================================
+                  NAME
+===================================== */
+.hero-name {
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-name span {
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #6c63ff,
+        #d500ff,
+        #ff009d
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(
+        0 0 13px rgba(153, 0, 255, 0.4)
+    );
+}
+
+/* =====================================
+               ROLE TEXT
+===================================== */
+.role-wrapper {
+    min-height: 45px;
+    margin-bottom: 20px;
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
+    font-weight: 500;
+    color: white;
+}
+
+.role-prefix {
+    color: #aeb3bf;
+}
+
+#typing-text {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Blinking cursor */
+.typing-cursor {
+    color: #00eaff;
+    margin-left: 3px;
+    display: inline-block;
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+/* =====================================
+            VALUE PROPOSITION
+===================================== */
+.value-text {
+    max-width: 590px;
+    color: #a7abb7;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* =====================================
+          LOCATION / AVAILABILITY
+===================================== */
+.availability {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #a7abb7;
+    font-size: 0.9rem;
+}
+
+.availability-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #00ff99;
+    box-shadow:
+        0 0 5px #00ff99,
+        0 0 12px #00ff99;
+
+    animation: availablePulse 1.5s infinite;
+}
+
+@keyframes availablePulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.divider {
+    color: #676d79;
+}
+
+.available-text {
+    color: #00ffa6;
+}
+
+/* =====================================
+                 BUTTONS
+===================================== */
+.neon-btn {
+    position: relative;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.primary-btn {
+    color: white;
+    border: none;
+    background: linear-gradient(
+        90deg,
+        #7557ff,
+        #bb16e8,
+        #ff168d
+    );
+    box-shadow:
+        0 0 12px rgba(140, 0, 255, 0.4);
+}
+
+.primary-btn:hover {
+    color: white;
+    transform: translateY(-5px) scale(1.04);
+    box-shadow:
+        0 0 15px #7d4cff,
+        0 0 30px rgba(255, 0, 174, 0.5);
+}
+
+/* Contact Button */
+.secondary-btn {
+    color: #00eaff;
+    border: 1px solid #00dfff;
+    background: rgba(0, 225, 255, 0.05);
+    box-shadow:
+        inset 0 0 10px rgba(0, 225, 255, 0.05);
+}
+
+.secondary-btn:hover {
+    color: #05060a;
+    background: #00eaff;
+    transform: translateY(-5px) scale(1.04);
+    box-shadow:
+        0 0 10px #00eaff,
+        0 0 25px #00eaff,
+        0 0 40px rgba(0, 234, 255, 0.4);
+}
+
+/* =====================================
+              SOCIAL ICONS
+===================================== */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #c6c8d0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    transition: 0.35s;
+}
+
+/* different glowing border effect */
+.social-btn:nth-child(1):hover {
+    color: white;
+    border-color: #b200ff;
+    background: rgba(178, 0, 255, 0.15);
+    box-shadow:
+        0 0 10px #b200ff,
+        0 0 25px rgba(178, 0, 255, 0.6);
+
+    transform: translateY(-5px) scale(1.12);
+}
+
+.social-btn:nth-child(2):hover {
+    color: white;
+    border-color: #00dfff;
+    background: rgba(0, 223, 255, 0.15);
+    box-shadow:
+        0 0 10px #00dfff,
+        0 0 25px rgba(0, 223, 255, 0.6);
+
+    transform: translateY(-5px) scale(1.12);
+}
+
+.social-btn:nth-child(3):hover {
+    color: white;
+    border-color: #ff168d;
+    background: rgba(255, 22, 141, 0.15);
+    box-shadow:
+        0 0 10px #ff168d,
+        0 0 25px rgba(255, 22, 141, 0.6);
+
+    transform: translateY(-5px) scale(1.12);
+}
+
+/* =====================================
+          BACKGROUND BLINKING DOTS
+===================================== */
+.dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    z-index: 0;
+    animation: dotBlink 2s infinite alternate;
+}
+
+.dot-1 {
+    left: 8%;
+    top: 25%;
+    background: #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+
+}
+
+.dot-2 {
+    left: 33%;
+    top: 15%;
+    background: #ff00ae;
+    box-shadow: 0 0 10px #ff00ae;
+    animation-delay: 0.5s;
+}
+
+.dot-3 {
+    right: 12%;
+    top: 20%;
+    background: #8e00ff;
+    box-shadow: 0 0 10px #8e00ff;
+    animation-delay: 1s;
+}
+
+.dot-4 {
+    right: 7%;
+    top: 65%;
+    background: #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+    animation-delay: 0.2s;
+}
+
+.dot-5 {
+    left: 10%;
+    bottom: 15%;
+    background: #ff00ae;
+    box-shadow: 0 0 10px #ff00ae;
+    animation-delay: 1.2s;
+}
+
+.dot-6 {
+    left: 48%;
+    bottom: 12%;
+    background: #ff7a00;
+    box-shadow: 0 0 10px #ff7a00;
+    animation-delay: 0.7s;
+}
+
+@keyframes dotBlink {
+    0% { opacity: 0.15; transform: scale(0.6); }
+    100% { opacity: 1; transform: scale(1.5); }
+}
+
+/* =====================================
+         LOAD SLIDE ANIMATIONS
+===================================== */
+/* Profile slides from LEFT once */
+.slide-left {
+    opacity: 0;
+    animation:
+        slideFromLeft 1.2s ease forwards;
+}
+
+/* Content slides from RIGHT once */
+.slide-right {
+    opacity: 0;
+    animation:
+        slideFromRight 1.2s ease forwards;
+
+    animation-delay: 0.15s;
+}
+
+@keyframes slideFromLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideFromRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* =====================================
+                RESPONSIVE
+===================================== */
+/* Tablets */
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .hero-section .row {
+        flex-wrap: wrap;
+    }
+
+    .hero-section .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .profile-area {
+        width: 370px;
+        height: 370px;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ring-one {
+        width: 340px;
+        height: 300px;
+    }
+
+    .ring-two {
+        width: 305px;
+        height: 350px;
+    }
+
+    .ring-three {
+        width: 290px;
+        height: 270px;
+    }
+
+    .hero-content {
+        margin: auto;
+        text-align: center;
+    }
+
+    .hello-text {
+        justify-content: center;
+    }
+
+    .availability {
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .profile-area {
+        width: 300px;
+        height: 300px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ring-one {
+        width: 280px;
+        height: 245px;
+    }
+
+    .ring-two {
+        width: 250px;
+        height: 290px;
+    }
+
+    .ring-three {
+        width: 235px;
+        height: 220px;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .role-wrapper {
+        font-size: 1.2rem;
+    }
+
+    .value-text {
+        padding: 0 10px;
+        font-size: 0.92rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .neon-btn {
+        width: 100%;
+    }
+
+    .availability {
+        font-size: 0.8rem;
+    }
+}

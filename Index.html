@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAMIT_G | UI Designer</title>
+
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <!-- font awasom -->
+    <script src="https://kit.fontawesome.com/efd872f22e.js" crossorigin="anonymous"></script>
+
+    <!-- all css links-->
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- ===============
+           NAVBAR
+    ================= -->
+    <nav id="portfolioNavbar" class="navbar navbar-expand-lg portfolio-navbar">
+        <!-- Navbar content width -->
+        <div class="container-fluid navbar-container">
+            <!-- =================================================
+             LOGO - LEFT SIDE
+        ================================================== -->
+            <a href="#home" class="navbar-brand logo-link" aria-label="Go to Home">
+                <span class="logo-border">
+                    <!-- Replace logo.png with your logo image -->
+                    <img src="/assets/portfolio logo.png" alt="My Logo" class="logo-image" />
+                </span>
+            </a>
+
+            <!-- =================================================
+             MOBILE TOGGLE BUTTON
+        ================================================== -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggle-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+            <!-- =================================================
+             NAVBAR COLLAPSE
+        ================================================== -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <!-- =================================================
+                 CENTER NAVIGATION LINKS
+            ================================================== -->
+                <ul class="navbar-nav mx-auto nav-links">
+                    <!-- HOME -->
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home"> Home </a>
+                    </li>
+
+                    <!-- ABOUT -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"> About </a>
+                    </li>
+
+                    <!-- SKILLS -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills"> Skills </a>
+                    </li>
+
+                    <!-- PROJECTS -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects"> Projects </a>
+                    </li>
+
+                    <!-- EDUCATION -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education"> Education </a>
+                    </li>
+
+                    <!-- RESUME -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume"> Resume </a>
+                    </li>
+
+                    <!-- CONTACT -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"> Contact </a>
+                    </li>
+                </ul>
+
+                <!-- =================================================
+                 DOWNLOAD RESUME BUTTON - RIGHT SIDE
+                ================================================== -->
+                <div class="resume-wrapper">
+                    <a href="SAMIT SANJAY GADPAYLE Resume.pdf" class="download-resume" download>
+                        <i class="fa-solid fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- =====================================
+                HERO SECTION
+    ===================================== -->
+    <section class="hero-section" id="home">
+
+        <!-- background blinking dots -->
+        <span class="dot dot-1"></span>
+        <span class="dot dot-2"></span>
+        <span class="dot dot-3"></span>
+        <span class="dot dot-4"></span>
+        <span class="dot dot-5"></span>
+        <span class="dot dot-6"></span>
+
+        <div class="container position-relative">
+
+            <div class="row g-2">
+
+                <!-- =========================
+                    LEFT SIDE
+                ========================== -->
+                <div class="col-lg-5 text-center">
+
+                    <div class="profile-area slide-left">
+
+                        <!-- Rotating rings -->
+                        <div class="ring ring-one"></div>
+                        <div class="ring ring-two"></div>
+                        <div class="ring ring-three"></div>
+
+                        <!-- Profile Image -->
+                        <div class="profile-image">
+                            <img src="/assets/profile photo.png" alt="Profile Image" class="img-fluid">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- =========================
+                    RIGHT SIDE
+                ========================== -->
+                <div class="col-lg-8">
+
+                    <div class="hero-content slide-right">
+
+                        <!-- small introduction -->
+                        <p class="hello-text"><span class="hello-line"></span>HELLO, I'M</p>
+
+                        <!-- Name -->
+                        <h1 class="hero-name">Samit<span>Gadpayle</span></h1>
+
+                        <!-- Role -->
+                        <div class="role-wrapper">
+
+                            <!-- <span class="role-prefix">I'm a</span> -->
+                            <span id="typing-text"></span>
+                            <span class="typing-cursor">|</span>
+
+                        </div>
+
+                        <!-- Value proposition -->
+                        <p class="value-text">I design clean, modern and engaging digital experiences that combine
+                            creativity,
+                            functionality and thoughtful user experiences.
+                        </p>
+
+                        <!-- Location -->
+                        <div class="availability">
+                            <span class="availability-dot"></span>
+
+                            <span>
+                                Nagpur, India
+                            </span>
+
+                            <span class="divider">•</span>
+
+                            <span class="available-text">
+                                Available for work
+                            </span>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="hero-buttons d-flex flex-wrap gap-3 mt-4">
+
+                            <a href="#projects" class="btn neon-btn primary-btn">
+                                View My Work
+                            </a>
+                            <a href="#contact" class="btn neon-btn secondary-btn">
+                                <i class="fa-regular fa-circle-user"></i>
+                                Contact
+                            </a>
+
+                        </div>
+
+                        <!-- Social Icons -->
+                        <div class="social-icons mt-4">
+
+                            <!-- Github -->
+                            <a href="https://github.com/" target="_blank" class="social-btn" aria-label="Github">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/" target="_blank" class="social-btn" aria-label="LinkedIn">
+                                <i class="fa-brands fa-square-linkedin"></i>
+                            </a>
+                            <!-- Email -->
+                            <a href="mailto:yourmail@gmail.com" class="social-btn" aria-label="Email">
+                                <i class="fa-solid fa-at"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================
+     ABOUT / HERO SECTION
+========================================= -->
+    <section class="about-section" id="about">
+
+        <div class="container">
+
+            <div class="about-box">
+
+                <!-- ABOUT ME TITLE -->
+                <h1 class="about-title slide-left title-animation">About
+                    <span class="neon-text">Me</span>
+                </h1>
+
+                <!-- SHORT INTRODUCTION -->
+                <div class="introduction">
+
+                    <p class="intro-line">
+                        I am a passionate UI/UX designer and front-end developer
+                        focused on creating clean and user-friendly digital experiences.
+                    </p>
+
+                    <p class="intro-line">
+                        🎓 <strong>Education:</strong>
+                        Currently pursuing my education in web design and development.
+                    </p>
+
+                    <p class="intro-line">
+                        📚 <strong>Course:</strong>
+                        Web Design, UI/UX Design and Front-End Development.
+                    </p>
+
+                    <p class="intro-line">
+                        💻 <strong>Technical Skills:</strong>
+                        HTML, CSS, Bootstrap, JavaScript and Figma.
+                    </p>
+
+                    <p class="intro-line">
+                        🚀 <strong>Projects:</strong>
+                        Portfolio Website, FoodMart Website and AniGallery.
+                    </p>
+
+                    <p class="intro-line">
+                        🎯 <strong>Goal:</strong>
+                        To become a professional UI/UX designer and front-end developer.
+                    </p>
+
+                </div>
+
+                <!-- DOWNLOAD RESUME -->
+                <div class="slide-left" style="animation-delay: 2.6s;">
+                    <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="scriptr.js"></script>
+</body>
+
+</html>

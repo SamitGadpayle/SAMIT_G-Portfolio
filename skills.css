@@ -1,0 +1,202 @@
+/* =========================
+           SKILLS SECTION
+        ========================== */
+.skills-section {
+  padding: 30px 0 20px;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(130, 0, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 80% 70%, rgba(255, 120, 0, 0.16), transparent 28%),
+    radial-gradient(circle at 50% 80%, rgba(180, 70, 255, 0.10), transparent 30%),
+    #050505;
+  color: #e8ebf6;
+  animation: slideFromLeft 1.2s ease forwards;
+}
+
+/* =========================
+           MAIN TITLE
+        ========================== */
+.skills-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    90deg,
+    #00eaff,
+    #6c63ff,
+    #d500ff,
+    #ff009d
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.35);
+}
+
+/* =========================
+           MAIN OUTER BOX
+        ========================== */
+.skills-box {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.96), rgba(10, 10, 10, 0.96)) padding-box,
+    linear-gradient(135deg, #3b82f6, #9333ea, #ff00ff, #ff7b00) border-box;
+  box-shadow:
+    0 0 5px #3b82f6,
+    0 0 10px #9333ea,
+    0 0 15px #ff00ff,
+    inset 0 0 10px rgba(0, 255, 255, 0.08);
+}
+
+/* =========================
+           INDIVIDUAL CARDS
+        ========================== */
+.skill-card {
+  height: 100%;
+  min-height: 180px;
+  padding: 18px 16px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(173, 216, 230, 0.18);
+  color: #e8ebf6;
+  backdrop-filter: blur(6px);
+  transition: all 0.4s ease;
+}
+
+/* Card hover effect */
+.skill-card:hover {
+  background: rgba(116, 93, 255, 0.12);
+  border-color: rgba(157, 121, 255, 0.75);
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 12px rgba(0, 255, 255, 0.18),
+    0 0 18px rgba(128, 0, 255, 0.18);
+}
+
+/* =========================
+           CARD TITLES
+        ========================== */
+.card-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #e8ebf6;
+}
+
+/* Development title */
+.development-title {
+  color: #e8ebf6;
+  text-shadow: none;
+}
+
+/* Tools title */
+.tools-title {
+  color: #e8ebf6;
+  text-shadow: none;
+}
+
+/* Design title */
+.design-title {
+  color: #e8ebf6;
+  text-shadow: none;
+}
+
+/* =========================
+           SKILL BUTTON AREA
+        ========================== */
+.skill-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* =========================
+           SKILL BUTTON
+        ========================== */
+.skill-btn {
+  background: transparent;
+  padding: 8px 14px;
+  color: #e8ebf6;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Different neon borders */
+.development-card .skill-btn {
+  border: 1px solid rgba(0, 234, 255, 0.7);
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.25);
+}
+
+.tools-card .skill-btn {
+  border: 1px solid rgba(142, 125, 255, 0.7);
+  box-shadow: 0 0 6px rgba(142, 125, 255, 0.25);
+}
+
+.design-card .skill-btn {
+  border: 1px solid rgba(255, 94, 219, 0.7);
+  box-shadow: 0 0 6px rgba(255, 94, 219, 0.25);
+}
+
+/* =========================
+           BUTTON HOVER
+        ========================== */
+.skill-btn:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(80, 190, 255, 0.18),
+    rgba(175, 90, 255, 0.22)
+  );
+  color: #f3f6ff;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 0 10px rgba(0, 234, 255, 0.3),
+    0 0 18px rgba(130, 80, 255, 0.4);
+}
+
+/* =========================
+           LEFT SLIDE ANIMATION
+        ========================== */
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 20px 15px 15px;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+    margin-bottom: 22px;
+  }
+
+  .skills-box {
+    padding: 12px;
+  }
+
+  .skill-card {
+    min-height: auto;
+    padding: 18px 14px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+}
